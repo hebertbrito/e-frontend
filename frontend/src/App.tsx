@@ -1,11 +1,10 @@
 import React from 'react';
+import RouterView from './router'
 
 function App() {
   return (
     <div style={{height: "100%"}}>
-      <div style={{backgroundClip: "#fafafafa"}}>
-        <p>teste</p>
-      </div>
+      <RouterView/>
     </div>
   );
 }
