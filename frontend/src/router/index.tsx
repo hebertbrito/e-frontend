@@ -5,21 +5,14 @@ import {
   Route,
   Link
 } from "react-router-dom";
-
-const Teste = ()=>{
-    return(
-        <div style={{height: "100%"}}>
-            <p>view ola</p>
-        </div>
-    )
-}
+import { UserPlan } from '../pages/userplan'
 
 export default function RouterView() {
     return(
         <Router>
             <Switch>
                 <Route exact={true} path="/"> 
-                    <Teste />
+                    <UserPlan />
                 </Route>
             </Switch>
         </Router>

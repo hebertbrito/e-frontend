@@ -1,0 +1,37 @@
+.container-userplan{
+    width: 100%;
+    background-color: #fafafafa;
+    display: flex;
+    flex: 1;
+    height: 100vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 45vw;
+    background-color: #e0e0e0;
+    display: flex;
+    flex-direction: column;
+    padding: 1.3%;
+    border-radius: 10px;
+    border-radius: 47px 11px 47px 11px;
+    -moz-border-radius: 47px 11px 47px 11px;
+    -webkit-border-radius: 47px 11px 47px 11px;
+    border: 0px solid #000000;
+    box-shadow:  5px 5px 10px #c5c5c5,
+             -5px -5px 10px #fbfbfb;
+}
+.sub-form-1{
+    display: flex;
+    flex-direction: row;
+}
+.check-box{
+    display: flex;
+    align-items: center;
+    margin: 1% 1% 1% 0;
+}
+.sub-form-2 {
+    display: flex;
+    flex-direction: column;
+}
