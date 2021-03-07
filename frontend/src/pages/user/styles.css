@@ -1,0 +1,31 @@
+.contentinputs{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: first baseline;
+}
+.informationData{
+    align-items: center;
+    padding-left: 1%;
+}
+.formalign{
+    align-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.container-type-person{
+    display: flex;
+    width: 100%;
+    margin: 0 0 1% 1%;
+    flex-direction: row;
+}
+.divradio{
+    margin-right: 2%;
+}
+.contButton{
+    width: 45vw;
+    margin-top: 1%;
+    display: flex;
+    justify-content: first baseline;
+}

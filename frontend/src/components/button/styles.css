@@ -1,0 +1,46 @@
+.buttonStyle{
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 0px solid #000000;
+    background-color: #FF6F00;
+    height: 3vh;
+    width: 8vw;
+    -webkit-box-shadow: 0px 0px 42px -9px rgba(0,0,0,1);
+    -moz-box-shadow: 0px 0px 42px -9px rgba(0,0,0,1);
+    box-shadow: 0px 0px 42px -9px rgba(0,0,0,1);
+    font-size: 0.8vw;
+}
+.buttonStyle:focus{
+    outline: none !important;
+}
+.buttonStyle:active{
+    outline-style: none !important;
+    -webkit-box-shadow: inset 0px 0px 42px -9px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 42px -9px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 42px -9px rgba(0,0,0,1);
+}
+.buttonStylePage{
+    border-radius: 7px 7px 7px 7px;
+    -moz-border-radius: 7px 7px 7px 7px;
+    -webkit-border-radius: 7px 7px 7px 7px;
+    border: 2.5px solid #000000;
+    background-color: transparent;
+    height: 3vh;
+    width: 8vw;
+    margin-right: 3%;
+    font-size: 0.8vw;
+}
+.buttonStylePage:focus{
+    outline: none !important;
+}
+.buttonStylePage:active{
+    outline-style: none !important;
+    -webkit-box-shadow: inset 0px 0px 42px -9px rgba(0,0,0,1);
+    -moz-box-shadow: inset 0px 0px 42px -9px rgba(0,0,0,1);
+    box-shadow: inset 0px 0px 42px -9px rgba(0,0,0,1);
+}
+
+
+
+

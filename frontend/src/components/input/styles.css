@@ -1,0 +1,21 @@
+.inputStyle{
+    border-top-width: 0;
+    border-bottom-width: 1;
+    border-left-width: 0;
+    border-right-width: 0;
+    background: transparent;
+    width: 200px;
+    margin: 10px;
+}
+.inputStyle:focus {
+    border-bottom-width: 1;
+    border-color: #ff6f00;
+    outline-width: 0;
+}
+.inputradio{
+    background-color: red;
+}
+.inputradio:checked{
+    background-color: #ff6f00;
+    color: #ff6f00;
+}
