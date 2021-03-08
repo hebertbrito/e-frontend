@@ -5,8 +5,7 @@ import {
   Route,
   Link
 } from "react-router-dom";
-import { UserPlan } from '../pages/userplan'
-import { User } from '../pages/user'
+import { UserPlan, User, ListUserPlanView } from '../pages'
 
 export default function RouterView() {
     return(
@@ -17,6 +16,9 @@ export default function RouterView() {
                 </Route>
                 <Route path="/user"> 
                     <User />
+                </Route>
+                <Route path="/listuserplan"> 
+                    <ListUserPlanView />
                 </Route>
             </Switch>
         </Router>

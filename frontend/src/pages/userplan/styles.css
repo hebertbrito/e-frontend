@@ -20,7 +20,7 @@
     -webkit-border-radius: 47px 11px 47px 11px;
     border: 0px solid #000000;
     box-shadow:  5px 5px 10px #c5c5c5,
-             -5px -5px 10px #fbfbfb;
+    -5px -5px 10px #fbfbfb;
 }
 .sub-form-1{
     display: flex;
