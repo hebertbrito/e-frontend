@@ -14,3 +14,6 @@
 # observações
 > Todas as APIS para o BackEnd batem na porta
 * https://localhost:5001/
+
+## Link para o BackEnd versão atual que utilizara com o frontend e-pharma
+<a href="https://github.com/hebertbrito/Server-E-Pharma">e-pharma</a>
