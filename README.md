@@ -3,7 +3,7 @@
 ## Execução do projeto
 * Clone o projeto ou faça Download via zip
 * Caminhe até o local pelo CMD (Prompt Command) onde o arquivo foi baixado
-* Npazta RAIZ do projeto Execute:
+* Na pasta RAIZ do projeto Execute:
   * docker-compose up -d --build
 
 ## Porta Localhost para o FrontEnd - Client
