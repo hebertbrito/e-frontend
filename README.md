@@ -5,6 +5,8 @@
 * Caminhe até o local pelo CMD (Prompt Command) onde o arquivo foi baixado
 * Na pasta RAIZ do projeto Execute:
   * docker-compose up -d --build
+* Finalizar container:
+  * docker-compose down
 
 ## Porta Localhost para o FrontEnd - Client
 * http://localhost:3001/
