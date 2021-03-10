@@ -6,17 +6,21 @@ interface InputMine {
     maxLength?: number,
     type?: string,
     pattern?: string
+    value?: string,
+    setValue: react.Dispatch<react.SetStateAction<string | undefined>>
 }
 
 export const InputMine = react.memo((props: InputMine) => {
 
-    const { placeholder, maxLength, type, pattern } = props;
+    const { placeholder, maxLength, type, pattern, value, setValue } = props;
 
     return (
         <input placeholder={placeholder} type={type}
             className="inputStyle"
             maxLength={maxLength}
             pattern={pattern}
+            value={value}
+            onChange={text => setValue(text.target.value.toString())}
         />
     )
 })
