@@ -8,6 +8,8 @@ export const UserPlan = react.memo(()=>{
     const [StartDatePlan, setStartDatePlan] = useState<string>()
     const [EndDatePlan, setEndDatePlan] = useState<string>()
     const [RegisterDate, setRegisterDate] = useState<string>()
+    const [TypeUser, setTypeUser] = useState<string>("1")
+
 
 
 
@@ -17,11 +19,11 @@ export const UserPlan = react.memo(()=>{
                     <div className="container-type-person">
                         <div className="divradio">
                             <label>Pessoa Fisica</label>
-                            <InputRadio name="typeuser" id="pf" value="´pf" />
+                            <InputRadio name="typeuser" id="1" value="´pf" setValue={setTypeUser}/>
                         </div>
                         <div>
                             <label>Pessoa Juridica</label>
-                            <InputRadio name="typeuser" id="pj" value="pj" />
+                            <InputRadio name="typeuser" id="2" value="pj" setValue={setTypeUser}/>
                         </div>
                     </div>
                     <div className="contentinputs">

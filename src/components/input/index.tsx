@@ -28,12 +28,14 @@ export const InputMine = react.memo((props: InputMine) => {
 interface InputRadio {
     id: string,
     name: string,
-    value: string
+    value: string,
+    setValue: react.Dispatch<react.SetStateAction<string>>,
+    checked?: boolean
 }
 
 export const InputRadio = react.memo((props: InputRadio) => {
 
-    const { id, name, value } = props;
+    const { id, name, value, setValue, checked } = props;
 
     return (
         <input type="radio"
@@ -41,6 +43,8 @@ export const InputRadio = react.memo((props: InputRadio) => {
             id={id}
             name={name}
             value={value}
+            onChange={item => setValue(item.target.id)}
+            checked={checked}
         />
     )
 })
