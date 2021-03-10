@@ -20,7 +20,7 @@ export const InputMine = react.memo((props: InputMine) => {
             maxLength={maxLength}
             pattern={pattern}
             value={value}
-            onChange={text => setValue(text.target.value.toString())}
+            onChange={text => setValue(text.target.value)}
         />
     )
 })

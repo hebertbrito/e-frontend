@@ -16,34 +16,34 @@ export const User = react.memo(() => {
     const [registerDate, setRegisterDate] = useState(new Date().toLocaleDateString("pt-BR"))
 
 
-    useEffect(()=>{
-        setTypeUser(typeUser)
-    },[typeUser])
-
     const data = async function () {
         try {
-            if(validate(typeUser)){
+
+            if (validatePJ() && validate()) {
                 const body = {
                     cpf, rg, cnpj, telephone, email, name, registerDate, typeUser, dateBirth
                 }
                 await CreateUser(body)
                 alert("Usuario Criado com sucesso")
-            }else{
+            } else {
                 alert("Parametros obrigatórios nao preenchidos")
             }
         } catch (error) {
             alert("Servidore Fora de serviço, ou parametros obrigatórios nao preenchidos")
         }
     }
-
-    const validate = function (TypeUser: string): boolean {
-        if(TypeUser === "2"){
-            if(cnpj){
-                return true
+    const validatePJ = function () {
+        if (typeUser == '2') {
+            if (cnpj == undefined || cnpj == null || cnpj.length == 0) {
+                return false
             }
         }
 
-        if(cpf && rg && name && telephone && typeUser && registerDate && dateBirth && email ){
+        return true
+    }
+    
+    const validate = function (): boolean {
+        if (cpf && rg && name && telephone && typeUser && registerDate && dateBirth && email) {
             return true
         }
 
@@ -68,7 +68,7 @@ export const User = react.memo(() => {
                     <InputMine placeholder="CPF" type="text" maxLength={11} value={cpf} setValue={setCPF} />
                     {typeUser === "2" ?
                         <InputMine placeholder="CNPJ" value={cnpj} setValue={setCNPJ} />
-                    :
+                        :
                         null
                     }
                 </div>
@@ -88,7 +88,7 @@ export const User = react.memo(() => {
             <div className="contButton">
                 <ButtonPage path="/listuserplan" wherego="Listagem" />
                 <ButtonPage path="/" wherego="Plano" />
-                <ButtonConfirm onPress={()=> data()}/>
+                <ButtonConfirm onPress={() => data()} />
             </div>
         </div>
     )

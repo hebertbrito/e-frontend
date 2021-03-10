@@ -1,4 +1,4 @@
-import react, { useState } from 'react'
+import react, { useState, useEffect } from 'react'
 import './styles.css'
 import { InputMine, ButtonConfirm, ButtonPage } from '../../components'
 import { GetListUserPlan } from '../../services/api/GetListUserPlan/index'
@@ -11,6 +11,23 @@ export const ListUserPlanView = react.memo(() => {
     const [cpf, setCPF] = useState<string>()
     const [cnpj, setCNPJ] = useState<string>()
     const [registerDate, setRegisterDate] = useState<string>()
+
+    useEffect(() => {
+        async function FirstSearch() {
+            try {
+                const bdy = { name, cpf, cnpj, registerDate }
+                const response = await GetListUserPlan(bdy)
+                if (response) {
+                    setvalues(response)
+                }
+            } catch (error) {
+                alert("Rota erra para busca, verificar URL_LOCAL ou Problema no servidor")
+            }
+        }
+
+        FirstSearch()
+
+    }, [])
 
     const Data = async function () {
         try {
@@ -33,15 +50,15 @@ export const ListUserPlanView = react.memo(() => {
         <div className="container-userplan formalign">
             <div className="containerfilter">
                 <div>
-                    <InputMine placeholder="Nome" type="text" maxLength={50} value={name} setValue={setName}/>
-                    <InputMine placeholder="CPF" type="text" maxLength={13} value={cpf} setValue={setCPF}/>
-                    <InputMine placeholder="CNPJ" type="text" maxLength={13} value={cnpj} setValue={setCNPJ}/>
-                    <InputMine placeholder="Data Cadastro Plano" type="text" maxLength={50} value={registerDate} setValue={setRegisterDate}/>
+                    <InputMine placeholder="Nome" type="text" maxLength={50} value={name} setValue={setName} />
+                    <InputMine placeholder="CPF" type="text" maxLength={13} value={cpf} setValue={setCPF} />
+                    <InputMine placeholder="CNPJ" type="text" maxLength={13} value={cnpj} setValue={setCNPJ} />
+                    <InputMine placeholder="Data Cadastro Plano" type="text" maxLength={50} value={registerDate} setValue={setRegisterDate} />
                 </div>
                 <div>
                     <ButtonConfirm onPress={Data} />
-                    <ButtonPage path="/" wherego="Plano"/>
-                    <ButtonPage path="/user" wherego="Usuario"/>
+                    <ButtonPage path="/" wherego="Plano" />
+                    <ButtonPage path="/user" wherego="Usuario" />
                 </div>
             </div>
             <div className="formlist">
@@ -57,8 +74,8 @@ export const ListUserPlanView = react.memo(() => {
                     </div>
                 </div>
                 {values ?
-                    values.map(item => (
-                        <div className="bodytextform">
+                    values.map((item, index) => (
+                        <div className="bodytextform" key={item.registerDate + index}>
                             <div>
                                 <p>{item.name}</p>
                             </div>
